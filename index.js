@@ -6,7 +6,7 @@ console.log("welcome " + username);
 console.log("Welcome to 'Do you Know Murtaza'\n");
 
 function quiz(question,answer){
-  var userAnswer = readlineSync.question(question);
+  var userAnswer = readlineSync.question("\n"+question+"\n");
   if(userAnswer===answer){
     console.log("Correct!");
     
@@ -15,7 +15,7 @@ function quiz(question,answer){
   }
   else{
     console.log("Wrong!!")
-    score--;
+    
     console.log("Your Score is:"+score);
   }
 
@@ -40,12 +40,15 @@ var questions = [{
 {
   question : "My fav sport?\n",
   answer : "Football"
+},
+{
+  question : "My birth month is?\n",
+  answer : "April"
 }
-
 ]
 
 for (var i= 0;i<questions.length;i++){
   var currentQuestion = questions[i];
   quiz(currentQuestion.question,currentQuestion.answer);
 }
-console.log("Your Final Score is "+score +" Out of 5")
+console.log("Your Final Score is "+score +" Out of "+questions.length)
