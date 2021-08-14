@@ -11,12 +11,12 @@ function quiz(question,answer){
     console.log("Correct!");
     
     score++;
-    console.log("Your Score is:"+score);
+    console.log("Your current score is:"+score);
   }
   else{
     console.log("Wrong!!")
     
-    console.log("Your Score is:"+score);
+    console.log("Your current score is:"+score);
   }
 
 }
